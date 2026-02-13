@@ -1,14 +1,15 @@
 const { Sequelize } = require('sequelize');
 
-// Use environment variables from Render, or fallback to local for XAMPP
+// Professional setup using Environment Variables
 const sequelize = new Sequelize(
-  'infra_niftel',      // DB Name
-  'infra_nif',         // DB User
-  'niftel@123',     // DB Password
+  process.env.DB_NAME || 'infra_niftel',      // Database Name
+  process.env.DB_USER || 'infra_nif',         // Database User
+  process.env.DB_PASS || 'niftel@123',         // Database Password
   {
-   host: '108.160.148.102', 
+    host: process.env.DB_HOST || '108.160.148.102', // Host IP
     dialect: 'mysql',
     logging: false,
+    port: 3306, // Standard MySQL port
     sync: { alter: false }
   }
 );
@@ -16,10 +17,10 @@ const sequelize = new Sequelize(
 const connectDB = async () => {
   try {
     await sequelize.authenticate();
-    console.log('✅ Connected to MySQL via Tunnel');
-    await sequelize.sync();
+    console.log('✅ Connected to MySQL on cPanel successfully');
+    // Removed sequelize.sync() for production to prevent accidental data loss
   } catch (error) {
-    console.error('❌ Unable to connect to MySQL:', error.message);
+    console.error('❌ Database Connection Error:', error.message);
   }
 };
 
