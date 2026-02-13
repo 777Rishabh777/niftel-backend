@@ -6,7 +6,7 @@ const sequelize = new Sequelize(
   'infra_nif',         // DB User
   'niftel@123',     // DB Password
   {
-    host: '162.241.xx.xx', // ⬅️ PASTE YOUR SHARED IP HERE
+   host: '108.160.148.102', 
     dialect: 'mysql',
     logging: false,
     sync: { alter: false }
