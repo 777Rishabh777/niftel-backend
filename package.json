@@ -1,0 +1,45 @@
+{
+  "name": "niftel-infra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@getbrevo/brevo": "^3.0.1",
+    "bcryptjs": "^3.0.3",
+    "bootstrap": "^5.3.3",
+    "busboy": "^1.6.0",
+    "compression": "^1.8.1",
+    "connect-session-sequelize": "^8.0.5",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "html-minifier-terser": "^7.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.5",
+    "multer": "^2.0.2",
+    "mysql2": "^3.16.2",
+    "nodemailer": "^7.0.12",
+    "sequelize": "^6.37.7",
+    "terser": "^5.44.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShreyaaMaurya/niftel-infra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShreyaaMaurya/niftel-infra/issues"
+  },
+  "homepage": "https://github.com/ShreyaaMaurya/niftel-infra#readme"
+}
