@@ -34,11 +34,10 @@ sequelize.sync()
 // 2. MIDDLEWARE
   
 app.use(cors({
-    origin: [
-        'http://localhost:5500',        // Your VS Code Live Server
-        'http://127.0.0.1:5500',      // Alternative local address
-        'https://777rishabh777.github.io', // If you use GitHub Pages
-        'https://niftel-infra.onrender.com' // Your actual live frontend URL
+    origin:
+        [ 'http://localhost:5500', 
+        'https://niftelinfra.com', // ✅ Add your actual cPanel domain
+        'https://www.niftelinfra.com'
     ],
     credentials: true
 }));
