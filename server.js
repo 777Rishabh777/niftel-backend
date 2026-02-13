@@ -18,6 +18,13 @@ const fs = require('fs');
 const adminRoutes = require('./routes/adminRoutes'); 
 
 const app = express();
+app.get('/api/test-backend', (req, res) => {
+    res.json({ 
+        status: "Success", 
+        message: "Backend files are working perfectly on Render!",
+        timestamp: new Date()
+    });
+});
 
 // 1. DATABASE CONNECTION
 connectDB(); 
