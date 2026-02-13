@@ -2,20 +2,14 @@ const { Sequelize } = require('sequelize');
 
 // Use environment variables from Render, or fallback to local for XAMPP
 const sequelize = new Sequelize(
-  process.env.DB_NAME || 'niftel_infra',
-  process.env.DB_USER || 'root',
-  process.env.DB_PASSWORD || '',
+  'infra_niftel',      // DB Name
+  'infra_nif',         // DB User
+  'niftel@123',     // DB Password
   {
-    host: process.env.DB_HOST || '127.0.0.1', // <--- This now uses the tunnel!
+    host: '162.241.xx.xx', // ⬅️ PASTE YOUR SHARED IP HERE
     dialect: 'mysql',
-    port: process.env.DB_PORT || 3306,         // <--- This now uses the tunnel port!
     logging: false,
-    pool: {
-      max: 5,
-      min: 0,
-      acquire: 30000,
-      idle: 10000
-    }
+    sync: { alter: false }
   }
 );
 
