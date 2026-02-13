@@ -6,7 +6,7 @@ const sequelize = new Sequelize(
   process.env.DB_USER || 'infra_nif',         // Database User
   process.env.DB_PASS || 'niftel@123',         // Database Password
   {
-    host: process.env.DB_HOST || '11.132.0.23', // Host IP
+    host: process.env.DB_HOST || '108.160.148.102', // Host IP
     dialect: 'mysql',
     logging: false,
     port: 3306, // Standard MySQL port
